@@ -1,0 +1,6 @@
+Revision history for Perl extension Clean::Backspace.
+
+1.00  Wed Nov 11 15:44:21 2009
+	- original version; created by h2xs 1.23 with options
+		-XAn Clean::Backspace
+
