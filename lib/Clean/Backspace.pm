@@ -3,7 +3,7 @@ package Clean::Backspace;
 use strict;
 use warnings;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 sub new {
     my $class = shift;
@@ -74,16 +74,16 @@ terminal but when you look at Oracle database table fields the unwanted characte
 
 =head1 METHODS
 
-There is just one method:  B<backspace()>.
-The method requires a list(s) reference(s) of string references.
-Ex: use Clean::Backspace;
-    my $clean = Clean::Backspace->new();
-    my $str1  = 'string1';
-    my $str2  = 'string2';
-    my @list  = (\$str1, \$str2);
-    $clean->backspace(\@list);
+  There is just one method:  B<backspace()>.
+  The method requires a list(s) reference(s) of string references.
+  Ex: use Clean::Backspace;
+      my $clean = Clean::Backspace->new();
+      my $str1  = 'string1';
+      my $str2  = 'string2';
+      my @list  = (\$str1, \$str2);
+      $clean->backspace(\@list);
 
-Since the references are processed there are no return values.
+  Since the references are processed there are no return values.
 
 =head1 AUTHOR
 
