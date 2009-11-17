@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Clean-Backspace
-version:             1.01
+version:             1.02
 abstract:            removes hidden backspaces and their corresponding deleted characters in strings
 license:             ~
 author:              

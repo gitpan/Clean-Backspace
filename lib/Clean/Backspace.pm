@@ -3,7 +3,7 @@ package Clean::Backspace;
 use strict;
 use warnings;
 
-our $VERSION = '1.01';
+our $VERSION = '1.02';
 
 sub new {
     my $class = shift;
@@ -74,7 +74,7 @@ terminal but when you look at Oracle database table fields the unwanted characte
 
 =head1 METHODS
 
-  There is just one method:  B<backspace()>.
+  There is just one method:  backspace().
   The method requires a list(s) reference(s) of string references.
   Ex: use Clean::Backspace;
       my $clean = Clean::Backspace->new();
