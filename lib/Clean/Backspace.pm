@@ -3,39 +3,77 @@ package Clean::Backspace;
 use strict;
 use warnings;
 
-our $VERSION = '1.02';
+our $VERSION = '1.03';
 
+# create new object
 sub new {
+
+    # class name
     my $class = shift;
+
+    # allocate memory
     my $self  = {};
 
+    # assign object to class
     bless($self, $class);
 
+    # return object reference
     return $self;
 }
 
+# backspace method
 sub backspace {
+
+    # object reference
     my $self = shift;
+
+    # loop through list of array references
     for (@_){
+
+        # loop through string references
         for (@$_){
+
+            # convert string to ascii decimal values and reverse order 
             my @tmp = unpack("C*", reverse($$_));
+
+            # delete character count
             my $del = 0;
+
+            # new string
             my @new;
 
+            # loop through character ascii values
             for (@tmp){
+
+                # look for ascii 8 backspace 
                 if ($_ == 8){
+
+                    # increment number of characters to delete
                     $del++;
+
+                    # skip over this character
                     next;
                 }
+
+                # check if any characters to delete
                 elsif ($del != 0){
+
+                    # decrement number of characters to delete 
                     $del--;
+
+                    # skip over this character
                     next;
                 }
+
+                # if ascii not equal to 8 or delete condition equals 0
                 else{
+
+                    # store ascii value
                     push (@new, $_);
                 }
             }
 
+            # convert ascii back to characters and reverse back to original order
             $$_ = pack("C*", reverse(@new));
         }
     }
